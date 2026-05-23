@@ -1,3 +1,14 @@
 # road-anomaly-classifier
 Image Processing Project
-Pipeline ArchitectureStep 1: iCrawler Scraping (Google, Bing, Baidu) to collect real road hazard imagery.  Step 2: Preprocessing & cleaning (noise removal, histogram equalization, and sharpening).  Step 3: HOG Feature Extraction (using scikit-image).  Step 4: SVM Training (using scikit-learn SVC + GridSearchCV).  Step 5: Evaluate & Save (logging Accuracy, F1, ROC-AUC metrics).  Setup and InstallationInstall the necessary dependencies before running the pipeline: pip install -r requirements.txt.  Usage & Quick StartRun the following commands to execute each standalone Python module:  Scrape images: python src/scraper.py --count 500 --engine google   Preprocess data: python src/preprocessor.py --size 128   Train the classifier: python src/train_classifier.py   Run single-image prediction: python src/predict.py --image photo.jpg --visualize   Review EDA & Results: jupyter notebook notebooks/eda_and_results.ipynb   
+Pipeline Architecture:
+Step 1: iCrawler Scraping (Google, Bing, Baidu) to collect real road hazard imagery. 
+Step 2: Preprocessing & cleaning (noise removal, histogram equalization, and sharpening).
+Step 3: HOG Feature Extraction (using scikit-image).
+Step 4: SVM Training (using scikit-learn SVC + GridSearchCV).
+Step 5: Evaluate & Save (logging Accuracy, F1, ROC-AUC metrics).
+Setup and InstallationInstall the necessary dependencies before running the pipeline: pip install -r requirements.txt.
+Usage & Quick StartRun the following commands to execute each standalone Python module:  Scrape images: python src/scraper.py --count 500 --engine google 
+Preprocess data: python src/preprocessor.py --size 128 
+Train the classifier: python src/train_classifier.py 
+Run single-image prediction: python src/predict.py --image photo.jpg --visualize  
+Review EDA & Results: jupyter notebook notebooks/eda_and_results.ipynb   
